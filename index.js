@@ -4,11 +4,6 @@ const execa = require('execa');
 const electronUtil = require('electron-util/node');
 
 const binary = path.join(__dirname.replace('app.asar', 'app.asar.unpacked'),"audio-devices");
-console.log("require main is ");
-console.log(require.main);
-
-console.log("process main is ");
-console.log(process.mainModule);
 
 const generateExport = (name, getArgs, callback) => {
   module.exports[name] = async (...inputs) => {
