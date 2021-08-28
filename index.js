@@ -3,8 +3,9 @@ const path = require('path');
 const execa = require('execa');
 const electronUtil = require('electron-util/node');
 
-const binary = path.join(electronUtil.fixPathForAsarUnpack(__dirname), 'audio-devices');
-console.log("binary path "+binary);
+// const binary = path.join(electronUtil.fixPathForAsarUnpack(__dirname), 'audio-devices');
+const binary = path.join(__dirname.replace('app.asar', 'app.asar.unpacked'),"audio-devices");
+console.log("updated binary path"+binary);
 
 const generateExport = (name, getArgs, callback) => {
   module.exports[name] = async (...inputs) => {

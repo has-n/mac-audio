@@ -1,6 +1,6 @@
 {
   "name": "mac-audio",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Get, set and configure the audio devices on macOS",
   "repository": "https://github.com/has-n/mac-audio",
   "author": {
