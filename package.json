@@ -9,7 +9,6 @@
     "url": "https://hsnk.in"
   },
   "bin": {
-    "macos-audio-devices": "./audio-devices",
     "audio-devices": "./audio-devices"
   },
   "license": "MIT",
