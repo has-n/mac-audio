@@ -1,8 +1,8 @@
 {
-  "name": "macos-audio-devices",
-  "version": "1.3.3",
+  "name": "mac-audio",
+  "version": "0.0.1",
   "description": "Get, set and configure the audio devices on macOS",
-  "repository": "https://github.com/karaggeorge/macos-audio-devices",
+  "repository": "https://github.com/has-n/mac-audio",
   "author": {
     "name": "Hasan Khan",
     "email": "hsnk42@gmail.com",
@@ -23,20 +23,6 @@
     "build": "swift build --configuration=release && mv .build/release/audio-devices .",
     "prepublishOnly": "npm run build"
   },
-  "keywords": [
-    "macos",
-    "swift",
-    "audio",
-    "devices",
-    "input",
-    "output",
-    "volume",
-    "mute",
-    "microphone",
-    "speaker",
-    "list",
-    "default"
-  ],
   "engines": {
     "node": ">=8"
   },
