@@ -1,9 +1,10 @@
 'use strict';
 const path = require('path');
 const execa = require('execa');
-const electronUtil = require('electron-util/node');
 
-const binary = path.join(__dirname.replace('app.asar', 'app.asar.unpacked'),"audio-devices");
+const binary = path.join(__dirname.replace(/(app)(\-[a-z0-9]+)?(\.asar)/,'$1$2$3.unpacked'),"audio-devices");
+
+console.log(`Binary found at ${binary}`);
 
 const generateExport = (name, getArgs, callback) => {
   module.exports[name] = async (...inputs) => {
