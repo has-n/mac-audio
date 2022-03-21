@@ -2,9 +2,8 @@
 const path = require('path');
 const execa = require('execa');
 
+// binary may exist in any of these directories: app.asar.unpacked, app-x64.asar.unpacked or app-arm64.asar.unpacked
 const binary = path.join(__dirname.replace(/(app)(\-[a-z0-9]+)?(\.asar)/,'$1$2$3.unpacked'),"audio-devices");
-
-console.log(`Binary found at ${binary}`);
 
 const generateExport = (name, getArgs, callback) => {
   module.exports[name] = async (...inputs) => {
